@@ -21,4 +21,6 @@
 ** xref:patterns:localize-state.adoc[5. Localize State]
 ** xref:patterns:observe-communications.adoc[6. Observe Communications]
 
+* xref:ROOT:contributing.adoc[How to Contribute to this Document]
+
 
