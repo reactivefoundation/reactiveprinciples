@@ -10,13 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../_/css/site.css">
 	<!-- OneTrust Cookies Consent Notice start for  -->
-	<script src="https://optanon.blob.core.windows.net/consent/668cc234-6daa-46b1-ab65-da192e2f6887-test.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="https://cdn.cookielaw.org/consent/668cc234-6daa-46b1-ab65-da192e2f6887.js" type="text/javascript" charset="UTF-8"></script>
 	<script type="text/javascript">
 		function OptanonWrapper() { }
 	</script>
 	<!-- OneTrust Cookies Consent Notice end for  -->
 
-	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="text/plain" class="optanon-category-2" async src="https://www.googletagmanager.com/gtag/js?id=UA-177054281-1"></script>
+	<script type="text/plain" class="optanon-category-2">
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-177054281-1');
+	</script>
+
+
+    
   </head>
   <!--add class="scroll-nav..." to body-->
   <body class="article">
@@ -44,10 +55,10 @@
 				<span></span>
 			</button>
 		</div>
-
+		<!--
 		<div id="topbar-nav" class="navbar-menu">
 			<div class="navbar-end">
-				<!-- a class="navbar-item" href="#">Home</a -->
+				<a class="navbar-item" href="#">Home</a>
 				<div class="navbar-item has-dropdown is-hoverable">
 					<a class="navbar-link" href="#">Resources</a>
 					<div class="navbar-dropdown">
@@ -56,13 +67,14 @@
 						<a class="navbar-item" href="#">Resource 3</a>
 					</div>
 				</div >
-				<!-- div class="navbar-item">
+				<div class="navbar-item">
 				<span class="control">
 				<a class="button is-primary" href="#">Download</a>
 				</span>
-				</div -->
+				</div>
 			</div>
 		</div>
+		-->
 
 	</nav>
 </header>
@@ -87,16 +99,16 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../principles/index.html">The Reactive principles</a>
+    <a class="nav-link" href="../principles/index.html">The Reactive Principles</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../principles/stay-responsive.html">I. Stay responsive</a>
+    <a class="nav-link" href="../principles/stay-responsive.html">I. Stay Responsive</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../principles/accept-uncertainty.html">II. Accept uncertainty</a>
+    <a class="nav-link" href="../principles/accept-uncertainty.html">II. Accept Uncertainty</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../principles/embrace-failure.html">III. Embrace failure</a>
+    <a class="nav-link" href="../principles/embrace-failure.html">III. Embrace Failure</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../principles/assert-autonomy.html">IV. Assert Autonomy</a>
@@ -117,7 +129,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">The Reactive patterns</a>
+    <a class="nav-link" href="index.html">The Reactive Patterns</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="partition-state.html">1. Partition State</a>
@@ -168,11 +180,13 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">The Reactive patterns</a></li>
+    <li><a href="index.html">The Reactive Patterns</a></li>
     <li><a href="partition-state.html">1. Partition State</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/git-local/1a-reactive/reactive-principles/docs/modules/patterns/pages/partition-state.adoc">Contribute</a></div -->
+<div class="download-pdf">
+	<a href="/reactive-principles.pdf" download="/reactive-principles.pdf">Download as PDF</a>
+</div>
 </div>
   <div class="content">
 <article class="doc">
@@ -193,7 +207,7 @@
 <p>Partitioning of state often comes with some sacrifice of consistency. The very idea of managing data partitions mostly or completely independently from each other goes contrary to the coordination protocols required to ensure guarantees that span partition boundaries, such as atomicity and isolation. For that reason, state partitioning usually requires an explicit tradeoff between performance, scalability, and fault tolerance on one hand and <a href="../principles/tailor-consistency.html" class="page">consistency and simplicity</a> on the other.</p>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">The Reactive patterns</a></span>
+  <span class="prev"><a href="index.html">The Reactive Patterns</a></span>
   <span class="next"><a href="communicate-facts.html">2. Communicate Facts</a></span>
 </nav>
 </article>
