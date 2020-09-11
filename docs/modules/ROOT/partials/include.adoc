@@ -1,0 +1,10 @@
+:page-partial:
+// global attributes
+
+// link shortcuts for `link:{akka}/typed/index.html` notation
+:reactive-manifesto:  https://www.reactivemanifesto.org/
+
+// to add icon for opening link in a new page
+
+:tab: image:ROOT:new-tab.svg[width=14]
+

@@ -1,0 +1,7 @@
+name: ""
+title: ""
+version: master
+prerelease: Beta
+nav:
+- modules/ROOT/nav.adoc
+

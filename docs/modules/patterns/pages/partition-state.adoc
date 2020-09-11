@@ -1,0 +1,13 @@
+= 1. Partition State
+include::ROOT:partial$include.adoc[]
+
+_Divide state into smaller chunks to leverage parallelism of the system_
+
+
+Distributed applications leverage parallelism of the underlying hardware by executing simultaneously on groups of computers that don't share memory. This parallel usage of  multi-core servers brings the coordination and concurrency control challenge to the multi-machine level and makes the handling of state as a monolith inefficient and oftentimes impossible. Partitioning of state also helps with scalability: while each node can only store and process a finite dataset, a network of them can handle larger computational problems.
+ 
+The well-established pattern that's been used by most distributed systems involves splitting the monolithic state into a set of smaller chunks, partitions, that are managed mostly independently from each other—ideally into tasks that are so-called https://en.wikipedia.org/wiki/Embarrassingly_parallel[_embarrassingly parallel]_. https://en.wikipedia.org/wiki/Embarrassingly_parallel[{tab}, window="new tab"] In this way they can leverage the available parallelism for more efficient and fault-tolerant execution. 
+
+Some data sets partition naturally, for example, accounts, purchase orders, devices, and user sessions. Others require more careful consideration of how to divide the data and what to use as a partition key.
+ 
+Partitioning of state often comes with some sacrifice of consistency. The very idea of managing data partitions mostly or completely independently from each other goes contrary to the coordination protocols required to ensure guarantees that span partition boundaries, such as atomicity and isolation. For that reason, state partitioning usually requires an explicit tradeoff between performance, scalability, and fault tolerance on one hand and xref:principles:tailor-consistency.adoc[consistency and simplicity] on the other. 

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5. Localize State :: Reactive Principles &amp; Patterns</title>
+    <link rel="prev" href="coordinate-dataflow.html">
+    <link rel="next" href="observe-communications.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../_/css/site.css">
+	<!-- OneTrust Cookies Consent Notice start for  -->
+	<script src="https://optanon.blob.core.windows.net/consent/668cc234-6daa-46b1-ab65-da192e2f6887-test.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for  -->
+
+	
+  </head>
+  <!--add class="scroll-nav..." to body-->
+  <body class="article">
+<header class="header">
+	<nav class="navbar">
+		
+		<div class="navbar-brand">
+		
+			<a class="navbar-item site-logo" href="https://reactive.foundation">
+				<img class="navbar-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+			</a>
+			<span class="separator">|</span>
+			<a class="navbar-item site-title" href="https://principles.reactive.foundation">
+				Reactive Principles &amp; Patterns
+			</a>
+
+			<div class="navbar-item search-bar">
+				<input id="search-input" type="text" placeholder="Search">
+			</div>
+
+
+			<button class="navbar-burger" data-target="topbar-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<div id="topbar-nav" class="navbar-menu">
+			<div class="navbar-end">
+				<!-- a class="navbar-item" href="#">Home</a -->
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="#">Resources</a>
+					<div class="navbar-dropdown">
+						<a class="navbar-item" href="#">Resource 1</a>
+						<a class="navbar-item" href="#">Resource 2</a>
+						<a class="navbar-item" href="#">Resource 3</a>
+					</div>
+				</div >
+				<!-- div class="navbar-item">
+				<span class="control">
+				<a class="button is-primary" href="#">Download</a>
+				</span>
+				</div -->
+			</div>
+		</div>
+
+	</nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">About this Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud-native/index.html">Design Principles for Cloud Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../edge-native/index.html">Design Principles for Edge Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../principles/index.html">The Reactive principles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/stay-responsive.html">I. Stay responsive</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/accept-uncertainty.html">II. Accept uncertainty</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/embrace-failure.html">III. Embrace failure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/assert-autonomy.html">IV. Assert Autonomy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/tailor-consistency.html">V. Tailor Consistency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/decouple-time.html">VI. Decouple Time</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/decouple-space.html">VII. Decouple Space</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/handle-dynamics.html">VIII. Handle Dynamics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The Reactive patterns</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="partition-state.html">1. Partition State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="communicate-facts.html">2. Communicate Facts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="isolate-mutations.html">3. Isolate Mutations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coordinate-dataflow.html">4. Coordinate Dataflow</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="localize-state.html">5. Localize State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="observe-communications.html">6. Observe Communications</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">master Beta</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master Beta</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">The Reactive patterns</a></li>
+    <li><a href="localize-state.html">5. Localize State</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/git-local/1a-reactive/reactive-principles/docs/modules/patterns/pages/localize-state.adoc">Contribute</a></div -->
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">5. Localize State</h1>
+<div class="paragraph">
+<p><em>Take ownership of data by co-locating state and processing</em></p>
+</div>
+<div class="paragraph">
+<p>In data-intensive applications and use-cases, it is often beneficial to co-locate state and processing, maintaining great <a href="https://en.wikipedia.org/wiki/Locality_of_reference">locality of reference</a> <a href="https://en.wikipedia.org/wiki/Locality_of_reference" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> while providing a <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">single source of truth</a>. <a href="https://en.wikipedia.org/wiki/Single_source_of_truth" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> Co-location allows for low-latency and high-throughput data processing, and more evenly distributed workloads.</p>
+</div>
+<div class="paragraph">
+<p>One way of achieving co-location is to <em>move the processing to the state</em>. This can be effectively achieved by using <a href="https://doc.akka.io/docs/akka/snapshot/typed/cluster-sharding.html">cluster sharding</a> <a href="https://doc.akka.io/docs/akka/snapshot/typed/cluster-sharding.html" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> (e.g. sharding on entity key) of in-memory data where the business logic is executed in-process on each shard, avoiding read and write contention. Ideally, the in-memory data should represent the single source of truth by mapping to the underlying storage in a <em>strongly consistent</em> fashion (e.g. using patterns like <a href="https://martinfowler.com/eaaDev/EventSourcing.html">Event Sourcing</a> <a href="https://martinfowler.com/eaaDev/EventSourcing.html" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> and <a href="https://martinfowler.com/bliki/MemoryImage.html">Memory Image</a>). <a href="https://martinfowler.com/bliki/MemoryImage.html" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a></p>
+</div>
+<div class="paragraph">
+<p>Co-location is different from, and complementary to, <a href="https://en.wikipedia.org/wiki/Cache_(computing)">caching</a>, <a href="https://en.wikipedia.org/wiki/Cache_(computing)" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> where you maintain read-only copies of the most frequently used data close to its processing context. Caching is extremely useful in some situations (in particular when the use-case is read-heavy). But it adds complexity around staying in sync with its master data, which makes it hard to maintain the desired level of consistency, and therefore cached data cannot be used as the single source of truth.</p>
+</div>
+<div class="paragraph">
+<p>Another way to get co-location is to <em>move the state to the processing</em>. This can be achieved by <a href="https://en.wikipedia.org/wiki/Replication_(computing)">replicating the data</a> <a href="https://en.wikipedia.org/wiki/Replication_(computing)" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> to all nodes where the business logic might run while leveraging techniques that ensure <em>eventually consistent</em> <em>convergence</em> of the data (e.g. using <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type">CRDTs</a> <a href="https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> with <a href="https://en.wikipedia.org/wiki/Gossip_protocol">gossip protocols</a> <a href="https://en.wikipedia.org/wiki/Gossip_protocol" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a>). These techniques have the additional advantage of ensuring high degrees of availability without the need for additional storage infrastructure and can be used to maintain data consistency across all levels of the stack; across components, nodes, data-centers, and clients where strong consistency is not required.</p>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="coordinate-dataflow.html">4. Coordinate Dataflow</a></span>
+  <span class="next"><a href="observe-communications.html">6. Observe Communications</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+	<div class="legal">
+		<p class="trademark">
+			&copy; 2020 All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" target="_blank">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.
+		</p>
+		<p class="link-list">
+			<a href="http://www.linuxfoundation.org/privacy" target="_blank">Privacy Policy</a> |
+			<a href="http://www.linuxfoundation.org/terms" target="_blank">Terms of Use</a> |
+			<a class="optanon-toggle-display">Cookie Settings</a>
+		</p>
+	</div>
+	<div class="brand">
+		<a href="https://reactive.foundation">
+			<img class="footer-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+		</a>
+	</div>
+</footer><script>
+  window.antora = window.antora || {}
+  window.antora.basePath = '..'
+  window.antora.pagePath = '/patterns/localize-state.html'
+</script>
+
+<script src="../_/js/site.js"></script>
+
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/vendor/search.js"></script>
+<script async src="../_/../search-index.js"></script>
+
+<script async src="../_/js/vendor/highlight.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" class="optanon-category-2" async src="https://www.googletagmanager.com/gtag/js?id=UA-177054281-1"></script>
+<script type="text/plain" class="optanon-category-2">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177054281-1');
+</script>
+  </body>
+</html>

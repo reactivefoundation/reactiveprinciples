@@ -1,0 +1,20 @@
+= V. Tailor Consistency
+include::ROOT:partial$include.adoc[]
+
+_Individualize consistency per component to balance availability and performance_
+
+
+Consistency is about guaranteeing the correctness and integrity of your application and user’s data. Providing more consistency guarantees than you actually need will not add value and will only decrease the availability, efficiency, and performance of your application. It doesn’t matter if you are correct if you can’t serve your customers reliably.
+
+[.float]
+.Strong consistency
+****
+http://www.bailis.org/blog/linearizability-versus-serializability/[Strong consistency] http://www.bailis.org/blog/linearizability-versus-serializability/[{tab}, window="new tab"] (by which we mean _strict serializability_ — informally it means that external observers see behavior as if they were interacting with a single, local system) is intuitive and easy to reason about but requires synchronous communication and coordination and—ultimately—requires the availability of all relevant participants. These are requirements that can halt progress under failure conditions, rendering the system non-responsive, and slow down progress in a healthy environment.
+****
+
+A helpful way to think about convergence in distributed systems is that the system is always in the _process_ of convergence but never manages to fully “catch up” and reach a final _state_ of convergence (on a global system scale). This is why it is so important to carefully define your “units of consistency”—_small islands of strong consistency in a river of constant change and uncertainty_—that can give you some level of predictability and certainty.
+
+
+When possible, design systems for https://www.allthingsdistributed.com/2008/12/eventually_consistent.html[eventual consistency] https://www.allthingsdistributed.com/2008/12/eventually_consistent.html[{tab}, window="new tab"] or https://en.wikipedia.org/wiki/Causal_consistency[causal consistency], https://en.wikipedia.org/wiki/Causal_consistency[{tab}, window="new tab"] leveraging asynchronous processing, which tolerates delays and temporary unavailability of its participants (e.g. using an https://en.wikipedia.org/wiki/Event-driven_architecture[event-driven architecture], https://en.wikipedia.org/wiki/Event-driven_architecture[{tab}, window="new tab"] certain https://en.wikipedia.org/wiki/NoSQL[NoSQL] https://en.wikipedia.org/wiki/NoSQL[{tab}, window="new tab"] databases, and https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type[CRDTs] https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type[{tab}, window="new tab"]). This allows the system to stay available and eventually converge, and in the case of failure, automatically recover. 
+
+If strong consistency is inherently needed for the correctness of a use-case, it should be applied judiciously and selectively, with clearly defined consistency boundaries, keeping the unit of consistency as small as possible to retain a maximum of scalability and availability.

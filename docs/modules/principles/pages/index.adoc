@@ -1,0 +1,16 @@
+= The Reactive Principles
+:toc:
+:toc-title: ON THIS PAGE
+:toclevels: 2
+
+
+Building a Cloud Native, Edge Native, or Internet of Things (IoT) application means building and running a distributed system on unreliable hardware and across unreliable networks. An application can be considered Reactive if it embraces the principles described below into its design and architecture, and often into its programming model. 
+
+[.float]
+****
+An application does not need to use Reactive approaches to apply these principles, though it can definitely help—there’s a reason Reactive is used!
+****
+
+Most distributed systems will typically end up tackling some or all of the challenges described in the xref:cloud-native:index.adoc[Cloud Native] and xref:edge-native.adoc[Edge Native] introductions, but that alone does not make them Reactive.  What criteria do we use to  distinguish between  a “Reactive application” and one that is not Reactive? The Reactive one addresses these problems directly in its abstractions, programming models, protocols, interaction schemes, error handling, and other such areas of design and architecture. Whereas many distributed systems, unfortunately, treat these issues as an afterthought—as operational problems or infrastructure problems that are dealt with via increasingly complex technology stacks, wrappers, workarounds, and unfortunate leaky abstractions. 
+
+The rest of this section walks through foundational principles of implementing distributed systems that make an application Reactive.

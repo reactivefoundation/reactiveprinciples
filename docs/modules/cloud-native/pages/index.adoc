@@ -1,0 +1,66 @@
+= Design Principles for Cloud Native Applications
+:page-toctitle: On This Page
+
+include::ROOT:partial$include.adoc[]
+
+
+Organizations are moving business critical applications to the cloud for a reason. The cloud enables fast time-to-market and turn-around time. It facilitates elasticity and high-availability. Applications can leverage both private and public clouds, and these hybrid cloud applications combine in-house data centers and ephemeral resources, allowing cost optimization, ownership, and flexibility. In addition, public cloud providers promote energy efficiency and geo-distribution to improve user experience and disaster recovery. 
+
+The cloud platform offers a radically different architecture than that of a traditional single-machine monolith and requires new tools, practices, design, and architecture to navigate efficiently. The cloud’s distributed nature brings its own set of concerns. Cloud applications must manage uncertainty and non-determinism; distributed state and communication; failure detection and recovery; data consistency and correctness; message loss, partitioning, reordering, and corruption.
+
+Infrastructure can hide some of the complexity inherent in a distributed system, but not completely. Cooperation between the application layer and the infrastructure layer is required for a system to provide a complete and coherent user experience maintaining end-to-end guarantees.
+
+== What is a Cloud Native application?
+
+A "cloud native" application, like all _native_ species, has adapted and evolved to be maximally efficient in its environment: the cloud. The cloud is a harsher environment for applications than those of the past, in particular, than the idealistic environment of a dedicated single node system. In the cloud, an application becomes distributed. Thus, it is forced to be resilient to hardware/network unpredictability and unreliability, i.e., from varying performance to all-out failure. 
+
+The bad news is that ensuring responsiveness and reliability in this harsh environment is difficult. The good news is that the applications we build after embracing this environment better match how the real world actually works. This in turn, provides better experiences for our users, whether humans or software.
+
+The constraints of the cloud environment, that make up the "cloud operating model," include:
+
+* Applications are limited in the ability to scale vertically on commodity hardware which typically leads to having many isolated autonomous services (often called microservices).
+* All inter-service communication takes place over unreliable networks.
+* You must operate under the assumption that the underlying hardware can fail or be restarted or moved at any time.
+* The services need to be able to detect and manage failure of their peers—including partial failures.
+* Strong consistency and transactions are expensive. Because of the coordination required, it is difficult to make services that manage data available, performant, and scalable.
+
+Therefore, a Cloud Native application is designed to leverage the cloud operating model. It is predictable, decoupled from the infrastructure, right-sized for capacity, and enables tight collaboration between development and operations. It can be decomposed into loosely-coupled, independently-operating services that are resilient from failures, driven by data, and operate intelligently across geographic regions. 
+
+While Cloud Native applications always have a clean separation of state and compute, there are two major classes of Cloud Native applications: _stateful_ and _stateless_. Each class addresses and excels in a different set of use-cases; non-trivial modern Cloud Native applications are usually a combination and composition of the two.
+
+== Reactive Cloud Native applications
+
+_Reactive_ is a different approach to thinking, designing, building, and reasoning about software systems—in particular distributed, highly concurrent, and data-intensive applications—that maximizes our chances of success in building Cloud Native applications.
+
+In a distributed system, we can't maintain the idealistic, strongly consistent, minimal latency, closed-world models of the single node system. In many cases, calls that would otherwise be local, in-process, must now become remote unreliable network calls. Portions of the system on different hardware can fail at any time, introducing the risk of partial failures; we are forced to relax the requirements (past traditional expectations) in order to stay available and scalable.
+
+Reactive is a proven approach to solving everyday problems before they manifest, in the most efficient way possible. It is based on understanding and accepting the nature and challenges of distributed systems and embracing their inherent uncertainty, and the constraints of the hardware and the network. The model and semantics we end up with after exploiting these constraints and applying a Reactive design puts us in a much better position to address its challenges.
+
+Reactive helps to ensure that Cloud Native applications are:
+
+*  _Responsive_: serve data and react to change in a timely fashion 
+* _Resilient:_ always available and self-healing 
+* _Elastic:_ allowing for scaling out and in, horizontally, on-demand, through efficient management of state, resources, and communication—locally as well as distributed. 
+
+Reactive helps us reap these benefits while nudging us toward better designs and away from less beneficial ones such as shared mutable state, synchronous communication, blocking I/O, and strongly coupled service architectures. Other benefits include services that require less code and a shorter time-to-market, resulting in better maintainability and extensibility over time. 
+
+Reactive helps us more naturally model the intrinsically asynchronous and potentially unbounded nature of data streams in the real world. When applied consistently, Reactive gives us a unified approach to addressing both stateless and stateful use-cases through efficient integration and composition of disparate data and services—qualities that are ideal in the orchestration and integration-centric world of distributed systems.
+
+== Why is Cloud Native infrastructure not enough?
+
+Cloud Native applications need both a scalable and available _infrastructure layer_ (e.g. https://kubernetes.io/[Kubernetes] https://kubernetes.io/[{tab}, window="new tab"] and its https://www.cncf.io/[ecosystem of tools] https://www.cncf.io/[{tab}, window="new tab"]) and a scalable and available _application layer._ The infrastructure layer excels in managing, orchestrating, scaling, and ensuring the availability of “empty boxes” of software: the containers. Managing containers only gets you halfway there. Of equal importance is what you put inside the boxes, and how you stitch them together into a single coherent system.
+
+Kelsey Hightower elegantly described https://twitter.com/kelseyhightower/status/1249888627561136129[the problem] https://twitter.com/kelseyhightower/status/1249888627561136129[{tab}, window="new tab"] “__There's a ton of effort attempting to "modernize" applications at the infrastructure layer, but without equal investment at the application layer, think frameworks and application servers, we're only solving half the problem. Even with the best orchestration, logging, security, and debugging infrastructure, code has to be written to make the best use of it.__”
+
+Both the infrastructure and application layers are equally important and need to work in concert to deliver a holistic and consistent user experience. They manage resilience and scalability at distinct granularity levels in the application stack. The application layer allows for fine-grained entity-level management of resilience and scalability, working closely with the application code, while the infrastructure layer is more coarse-grained. In a way, the infrastructure layer acts as a “Cloud OS”, where the containers are similar to processes, each with a certain level of isolation, resource management, and resiliency. The “Cloud OS” provides basic features such as persistence, I/O, communication, monitoring, and deployment. The application logic lives within these containers utilizing the services provided by the “Cloud OS” but still must be properly designed and put together to deliver a complete end-user application. 
+
+The xref:principles:index.adoc[Reactive Principles] show the way: 
+
+* *Reactive Cloud Native applications are more efficient.*
+If cloud infrastructure is about making more efficient use of infrastructure resources like machines, networks, and operating systems, then Reactive Cloud Native applications are about making more efficient use of application resources like data, threads, and CPUs. 
+* *Reactive Cloud Native applications are more robust.* 
+If cloud infrastructure provides mechanisms to restart failing nodes, re-route failing requests, and provision new infrastructure capacity, Reactive Cloud Native applications provide modern and improved mechanisms to handle application lifecycle changes, intelligently recover from failed requests, and accommodate service and topology changes.
+* *Reactive Cloud Native applications are more manageable, adaptable, and agile.* 
+If cloud infrastructure provides mechanisms for managing ever-changing physical infrastructure, Reactive Cloud Native applications provide clear management, tooling, insights, and operational support for changes to routing, sharding, threading, topology, and more.
+
+Now that we’ve established the motivation for Reactive Cloud Native applications, let’s review the Reactive xref:principles:index.adoc[principles] and xref:patterns:index.adoc[patterns] that you can employ to ensure that your systems achieve these goals.

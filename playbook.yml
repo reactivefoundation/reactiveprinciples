@@ -1,0 +1,32 @@
+site:
+  url: https://principles.reactive.foundation
+  title: Reactive Principles & Patterns
+  
+content:
+  branches: [HEAD]
+  sources:
+  - url:  git@github.com:reactivefoundation/principles.reactive.foundation.git
+    edit_url: ~
+    start-path: docs
+  
+
+ui:
+  bundle:
+    url: ./ui-bundle/ui-bundle.zip
+    snapshot: true
+      
+    
+runtime:
+  fetch: true
+
+asciidoc:
+  attributes:
+    
+    page-pagination: ""
+    
+
+    
+
+output:
+#   dir: ./
+   clean: true

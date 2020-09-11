@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IV. Assert Autonomy :: Reactive Principles &amp; Patterns</title>
+    <link rel="prev" href="embrace-failure.html">
+    <link rel="next" href="tailor-consistency.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../_/css/site.css">
+	<!-- OneTrust Cookies Consent Notice start for  -->
+	<script src="https://optanon.blob.core.windows.net/consent/668cc234-6daa-46b1-ab65-da192e2f6887-test.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for  -->
+
+	
+  </head>
+  <!--add class="scroll-nav..." to body-->
+  <body class="article">
+<header class="header">
+	<nav class="navbar">
+		
+		<div class="navbar-brand">
+		
+			<a class="navbar-item site-logo" href="https://reactive.foundation">
+				<img class="navbar-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+			</a>
+			<span class="separator">|</span>
+			<a class="navbar-item site-title" href="https://principles.reactive.foundation">
+				Reactive Principles &amp; Patterns
+			</a>
+
+			<div class="navbar-item search-bar">
+				<input id="search-input" type="text" placeholder="Search">
+			</div>
+
+
+			<button class="navbar-burger" data-target="topbar-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<div id="topbar-nav" class="navbar-menu">
+			<div class="navbar-end">
+				<!-- a class="navbar-item" href="#">Home</a -->
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="#">Resources</a>
+					<div class="navbar-dropdown">
+						<a class="navbar-item" href="#">Resource 1</a>
+						<a class="navbar-item" href="#">Resource 2</a>
+						<a class="navbar-item" href="#">Resource 3</a>
+					</div>
+				</div >
+				<!-- div class="navbar-item">
+				<span class="control">
+				<a class="button is-primary" href="#">Download</a>
+				</span>
+				</div -->
+			</div>
+		</div>
+
+	</nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">About this Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud-native/index.html">Design Principles for Cloud Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../edge-native/index.html">Design Principles for Edge Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The Reactive principles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stay-responsive.html">I. Stay responsive</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="accept-uncertainty.html">II. Accept uncertainty</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="embrace-failure.html">III. Embrace failure</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="assert-autonomy.html">IV. Assert Autonomy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tailor-consistency.html">V. Tailor Consistency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="decouple-time.html">VI. Decouple Time</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="decouple-space.html">VII. Decouple Space</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="handle-dynamics.html">VIII. Handle Dynamics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../patterns/index.html">The Reactive patterns</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/partition-state.html">1. Partition State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/communicate-facts.html">2. Communicate Facts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/isolate-mutations.html">3. Isolate Mutations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/coordinate-dataflow.html">4. Coordinate Dataflow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/localize-state.html">5. Localize State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/observe-communications.html">6. Observe Communications</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">master Beta</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master Beta</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">The Reactive principles</a></li>
+    <li><a href="assert-autonomy.html">IV. Assert Autonomy</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/git-local/1a-reactive/reactive-principles/docs/modules/principles/pages/assert-autonomy.adoc">Contribute</a></div -->
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">IV. Assert Autonomy</h1>
+<div class="paragraph">
+<p><em>Design components that act independently and interact collaboratively</em></p>
+</div>
+<div class="paragraph">
+<p>The components of a larger system can only stay responsive to the degree of autonomy they have from the rest of the system. In Reactive applications, autonomy is achieved by clearly defining the component boundaries, who owns what data and how the owners make it available, and by designing them such that each party is afforded the necessary degree of freedom to make its own decisions.<br>
+When a service calls  upon another component, that component must have the ability to communicate back momentary degradations, for example, caused by overload or faulty dependencies. And it must have the freedom to not respond when that is appropriate, most notably when shedding heavy load. This requires the protocol between these components to be asynchronous and event-based, even when the used API looks synchronous — after all, we can only contain component-level failure when the protocol foresees the possibility of unsuccessful or late responses.</p>
+</div>
+<div class="paragraph">
+<p>Another aspect of autonomy is that the boundary between the two components is crossed only via the documented protocols; there cannot be other side-channels. Only with this discipline is it possible to reason about the collaboration and potentially verify it formally (for example using <a href="https://groups.inf.ed.ac.uk/abcd/">Session Types</a> <a href="https://groups.inf.ed.ac.uk/abcd/" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a>). Many times the protocol will be trivial, like the <a href="https://en.wikipedia.org/wiki/Request%E2%80%93response">request-response</a> <a href="https://en.wikipedia.org/wiki/Request%E2%80%93response" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> message pairs, but in other cases, it may involve back-pressure (as in <a href="https://www.reactive-streams.org/">Reactive Streams</a> <a href="https://www.reactive-streams.org/" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a>) or even complex consensus protocols between multiple parties. The important part is that the protocol is fully specified, respecting the autonomy of the participants within the communication design.</p>
+</div>
+<div class="paragraph">
+<p>Valuable patterns that foster autonomy include: <a href="https://martinfowler.com/bliki/DomainDrivenDesign.html">domain-driven design</a>, <a href="https://martinfowler.com/bliki/DomainDrivenDesign.html" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> <a href="https://martinfowler.com/eaaDev/EventSourcing.html">event-sourcing</a>, <a href="https://martinfowler.com/eaaDev/EventSourcing.html" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> and <a href="https://martinfowler.com/bliki/CQRS.html">CQRS</a>. <a href="https://martinfowler.com/bliki/CQRS.html" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> Communicating fully self-contained <em>facts</em> — modeled closely after the underlying business domain — gives the recipient the power to make their own decisions without having to ask again for more information. CQRS separates concerns by making decisions about one part of the system in one location (one component), which can then readily be disseminated and acted upon elsewhere—possibly at a much later time.</p>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="embrace-failure.html">III. Embrace failure</a></span>
+  <span class="next"><a href="tailor-consistency.html">V. Tailor Consistency</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+	<div class="legal">
+		<p class="trademark">
+			&copy; 2020 All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" target="_blank">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.
+		</p>
+		<p class="link-list">
+			<a href="http://www.linuxfoundation.org/privacy" target="_blank">Privacy Policy</a> |
+			<a href="http://www.linuxfoundation.org/terms" target="_blank">Terms of Use</a> |
+			<a class="optanon-toggle-display">Cookie Settings</a>
+		</p>
+	</div>
+	<div class="brand">
+		<a href="https://reactive.foundation">
+			<img class="footer-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+		</a>
+	</div>
+</footer><script>
+  window.antora = window.antora || {}
+  window.antora.basePath = '..'
+  window.antora.pagePath = '/principles/assert-autonomy.html'
+</script>
+
+<script src="../_/js/site.js"></script>
+
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/vendor/search.js"></script>
+<script async src="../_/../search-index.js"></script>
+
+<script async src="../_/js/vendor/highlight.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" class="optanon-category-2" async src="https://www.googletagmanager.com/gtag/js?id=UA-177054281-1"></script>
+<script type="text/plain" class="optanon-category-2">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177054281-1');
+</script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+= The Reactive Patterns
+
+The following patterns can help us apply the xref:principles:index.adoc[Reactive Principles]:
+
+* xref:partition-state.adoc[Partition State]
+* xref:communicate-facts.adoc[Communicate Facts]
+* xref:isolate-mutations.adoc[Isolate Mutations]
+* xref:coordinate-dataflow.adoc[Coordinate Dataflow]
+* xref:localize-state.adoc[Localize State]
+* xref:observe-communications.adoc[Observe Communications]

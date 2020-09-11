@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>6. Observe Communications :: Reactive Principles &amp; Patterns</title>
+    <link rel="prev" href="localize-state.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../_/css/site.css">
+	<!-- OneTrust Cookies Consent Notice start for  -->
+	<script src="https://optanon.blob.core.windows.net/consent/668cc234-6daa-46b1-ab65-da192e2f6887-test.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for  -->
+
+	
+  </head>
+  <!--add class="scroll-nav..." to body-->
+  <body class="article">
+<header class="header">
+	<nav class="navbar">
+		
+		<div class="navbar-brand">
+		
+			<a class="navbar-item site-logo" href="https://reactive.foundation">
+				<img class="navbar-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+			</a>
+			<span class="separator">|</span>
+			<a class="navbar-item site-title" href="https://principles.reactive.foundation">
+				Reactive Principles &amp; Patterns
+			</a>
+
+			<div class="navbar-item search-bar">
+				<input id="search-input" type="text" placeholder="Search">
+			</div>
+
+
+			<button class="navbar-burger" data-target="topbar-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<div id="topbar-nav" class="navbar-menu">
+			<div class="navbar-end">
+				<!-- a class="navbar-item" href="#">Home</a -->
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="#">Resources</a>
+					<div class="navbar-dropdown">
+						<a class="navbar-item" href="#">Resource 1</a>
+						<a class="navbar-item" href="#">Resource 2</a>
+						<a class="navbar-item" href="#">Resource 3</a>
+					</div>
+				</div >
+				<!-- div class="navbar-item">
+				<span class="control">
+				<a class="button is-primary" href="#">Download</a>
+				</span>
+				</div -->
+			</div>
+		</div>
+
+	</nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">About this Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud-native/index.html">Design Principles for Cloud Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../edge-native/index.html">Design Principles for Edge Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../principles/index.html">The Reactive principles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/stay-responsive.html">I. Stay responsive</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/accept-uncertainty.html">II. Accept uncertainty</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/embrace-failure.html">III. Embrace failure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/assert-autonomy.html">IV. Assert Autonomy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/tailor-consistency.html">V. Tailor Consistency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/decouple-time.html">VI. Decouple Time</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/decouple-space.html">VII. Decouple Space</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../principles/handle-dynamics.html">VIII. Handle Dynamics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The Reactive patterns</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="partition-state.html">1. Partition State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="communicate-facts.html">2. Communicate Facts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="isolate-mutations.html">3. Isolate Mutations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="coordinate-dataflow.html">4. Coordinate Dataflow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localize-state.html">5. Localize State</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="observe-communications.html">6. Observe Communications</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">master Beta</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master Beta</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">The Reactive patterns</a></li>
+    <li><a href="observe-communications.html">6. Observe Communications</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/git-local/1a-reactive/reactive-principles/docs/modules/patterns/pages/observe-communications.adoc">Contribute</a></div -->
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">6. Observe Communications</h1>
+<div class="paragraph">
+<p><em>Understand your system by looking at its dynamics</em></p>
+</div>
+<div class="paragraph">
+<p>With the increasing complexity of applications and systems, introspecting a system becomes a stringent requirement. Observability is about collecting data to answer a simple question: how is your system doing? Observability enables you to understand what is going on and provides a more precise status of the system—both now, or historically to help identify trends.</p>
+</div>
+<div class="paragraph">
+<p>In general, observability composes application metrics, network metrics, health reports, logs, and traces. From these, it derives other synthetic metrics and alerts enforcing the availability and reliability of the system.</p>
+</div>
+<div class="paragraph">
+<p>In Reactive systems, it is indispensable to observe not only applications but also their communication tissue. Application metrics are often not enough to wisely make decisions about the overall state of the system. By looking at the communication, you extract the system dynamics—how the data flows. Collecting information about data consumers, producers, exchanges, and queue sizes allows identification of bottlenecks and misbehaving components. It greatly helps find those parts of the system that are running behind by looking at the evolution of the consumed message rate. This level of observation is essential to drive elasticity decisions and continuously adjust your system to meet the current demands.</p>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="localize-state.html">5. Localize State</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+	<div class="legal">
+		<p class="trademark">
+			&copy; 2020 All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" target="_blank">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.
+		</p>
+		<p class="link-list">
+			<a href="http://www.linuxfoundation.org/privacy" target="_blank">Privacy Policy</a> |
+			<a href="http://www.linuxfoundation.org/terms" target="_blank">Terms of Use</a> |
+			<a class="optanon-toggle-display">Cookie Settings</a>
+		</p>
+	</div>
+	<div class="brand">
+		<a href="https://reactive.foundation">
+			<img class="footer-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+		</a>
+	</div>
+</footer><script>
+  window.antora = window.antora || {}
+  window.antora.basePath = '..'
+  window.antora.pagePath = '/patterns/observe-communications.html'
+</script>
+
+<script src="../_/js/site.js"></script>
+
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/vendor/search.js"></script>
+<script async src="../_/../search-index.js"></script>
+
+<script async src="../_/js/vendor/highlight.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" class="optanon-category-2" async src="https://www.googletagmanager.com/gtag/js?id=UA-177054281-1"></script>
+<script type="text/plain" class="optanon-category-2">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177054281-1');
+</script>
+  </body>
+</html>

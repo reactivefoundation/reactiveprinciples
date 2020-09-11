@@ -1,0 +1,24 @@
+= III. Embrace Failure
+include::ROOT:partial$include.adoc[]
+
+_Expect things to go wrong and design for resilience_
+
+
+[.float]
+****
+Following the definitions from the Reactive Manifesto, https://www.reactivemanifesto.org/glossary#Failure[_failure]_ denotes a condition that prevents a component from servicing requests, while https://www.reactivemanifesto.org/glossary#Error[_errors]_ denote normal conditions that arise in your program — e.g. due to input validation — and thus are directly signaled back to the calling component. 
+****
+
+Reactive applications consider failure as an expected condition that will eventually occur. Therefore, failure must be explicitly represented and handled at some level, for example in the infrastructure, by a supervisor component, or within the component itself (by using internal redundancy). Requests should be answered whenever possible even in the failure case, even though xref:assert-autonomy.adoc[_component autonomy_] will already ensure that the failure remains contained in as small an area of the application’s function as possible. xref:decouple-space.adoc[_Decoupling in space_] further allows the failure to be kept inside designated failure zones while xref:decouple-time.adoc[_decoupling in time_] enables other components to reliably detect and handle failures even when they cannot be explicitly communicated.
+
+An explicitly represented failure condition also allows a component to purposefully provide degraded service instead of failing silently and completely. Where possible, this can also be used to implement _self-healing_ capabilities although this cannot be done in a generic fashion apart from the _let it crash_ approach of killing and restarting the component—a strategy used successfully in implementations of the https://en.wikipedia.org/wiki/Actor_model[Actor Model] https://en.wikipedia.org/wiki/Actor_model[{tab}, window="new tab"], e.g. https://www.erlang.org/[Erlang] https://www.erlang.org/[{tab}, window="new tab"], https://akka.io/[Akka] https://akka.io/[{tab}, window="new tab"], https://elixir-lang.org/[Elixir] https://elixir-lang.org/[{tab}, window="new tab"], and https://vlingo.io/[VLINGO] https://vlingo.io/[{tab}, window="new tab"]. 
+
+It's also essential to remark that failures may be undetectable. So, it's not always possible for the application to be sure of the correctness. However, even undetectable failures  should not influence the application, which should continue to operate normally.
+
+While these are powerful capabilities, employing them in a non-reactive context (such as within the non-distributed implementation of a single component) is usually more work than using traditional mechanisms like exceptions. The best way to handle failures also depends on the particular choice of programming language and paradigm, where those using exceptions for both failures and errors profit more from the explicit representation than those that, for example, use https://en.wikipedia.org/wiki/Tagged_union[sum types] https://en.wikipedia.org/wiki/Tagged_union[{tab}, window="new tab"] (like _Either_) to return fallible results and abort the program upon failure.
+
+Another use of explicitly represented failure is that it can be communicated as a _value_ to other threads, processes, or over the network. This is used in platform and language-specific ways in various Reactive Programming techniques. For example:
+
+* The _onError_ signal in https://www.reactive-streams.org/[Reactive Streams]. https://www.reactive-streams.org/[{tab}, window="new tab"]
+* The form of throwing and catching exceptions in http://reactivex.io/documentation/observable.html[Observable] http://reactivex.io/documentation/observable.html[{tab}, window="new tab"] streams using _async/await_. 
+* Only communicating the occurrence but not the nature of a failure, to ensure full encapsulation, as in the https://en.wikipedia.org/wiki/Actor_model[Actor Model]. https://en.wikipedia.org/wiki/Actor_model[{tab}, window="new tab"]

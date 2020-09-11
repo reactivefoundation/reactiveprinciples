@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VII. Decouple Space :: Reactive Principles &amp; Patterns</title>
+    <link rel="prev" href="decouple-time.html">
+    <link rel="next" href="handle-dynamics.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../_/css/site.css">
+	<!-- OneTrust Cookies Consent Notice start for  -->
+	<script src="https://optanon.blob.core.windows.net/consent/668cc234-6daa-46b1-ab65-da192e2f6887-test.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for  -->
+
+	
+  </head>
+  <!--add class="scroll-nav..." to body-->
+  <body class="article">
+<header class="header">
+	<nav class="navbar">
+		
+		<div class="navbar-brand">
+		
+			<a class="navbar-item site-logo" href="https://reactive.foundation">
+				<img class="navbar-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+			</a>
+			<span class="separator">|</span>
+			<a class="navbar-item site-title" href="https://principles.reactive.foundation">
+				Reactive Principles &amp; Patterns
+			</a>
+
+			<div class="navbar-item search-bar">
+				<input id="search-input" type="text" placeholder="Search">
+			</div>
+
+
+			<button class="navbar-burger" data-target="topbar-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<div id="topbar-nav" class="navbar-menu">
+			<div class="navbar-end">
+				<!-- a class="navbar-item" href="#">Home</a -->
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="#">Resources</a>
+					<div class="navbar-dropdown">
+						<a class="navbar-item" href="#">Resource 1</a>
+						<a class="navbar-item" href="#">Resource 2</a>
+						<a class="navbar-item" href="#">Resource 3</a>
+					</div>
+				</div >
+				<!-- div class="navbar-item">
+				<span class="control">
+				<a class="button is-primary" href="#">Download</a>
+				</span>
+				</div -->
+			</div>
+		</div>
+
+	</nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">About this Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud-native/index.html">Design Principles for Cloud Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../edge-native/index.html">Design Principles for Edge Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The Reactive principles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stay-responsive.html">I. Stay responsive</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="accept-uncertainty.html">II. Accept uncertainty</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="embrace-failure.html">III. Embrace failure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assert-autonomy.html">IV. Assert Autonomy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tailor-consistency.html">V. Tailor Consistency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="decouple-time.html">VI. Decouple Time</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="decouple-space.html">VII. Decouple Space</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="handle-dynamics.html">VIII. Handle Dynamics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../patterns/index.html">The Reactive patterns</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/partition-state.html">1. Partition State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/communicate-facts.html">2. Communicate Facts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/isolate-mutations.html">3. Isolate Mutations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/coordinate-dataflow.html">4. Coordinate Dataflow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/localize-state.html">5. Localize State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/observe-communications.html">6. Observe Communications</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">master Beta</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master Beta</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">The Reactive principles</a></li>
+    <li><a href="decouple-space.html">VII. Decouple Space</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/git-local/1a-reactive/reactive-principles/docs/modules/principles/pages/decouple-space.adoc">Contribute</a></div -->
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">VII. Decouple Space</h1>
+<div class="paragraph">
+<p><em>Create flexibility by embracing the network</em></p>
+</div>
+<div class="paragraph">
+<p>We can only create a resilient system if we allow it to live in multiple locations so that it can function when parts of the underlying hardware malfunction or are inaccessible; in other words, we need to distribute the parts across space. Once distributed, the now <em>autonomous</em> components collaborate, as loosely coupled as is possible for the given use-case, to make maximal use of the newly won independence from one specific location.</p>
+</div>
+<div class="paragraph">
+<p>This <em>spatial decoupling</em> makes use of network communication to connect the potentially remote pieces again. Since all networks function by passing messages between nodes and since this message-passing takes time, spatial decoupling introduces asynchronous <a href="https://reactivemanifesto.org/glossary#Message-Driven">message-passing</a> <a href="https://reactivemanifesto.org/glossary#Message-Driven" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> on a foundational level. Higher-level representations of this aspect are <a href="https://grpc.io/">gRPC</a>, <a href="https://grpc.io/" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> <a href="https://nats.io/">NATS.io</a>, <a href="https://nats.io/" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> <a href="https://kafka.apache.org/">Apache Kafka</a>, <a href="https://kafka.apache.org/" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> HTTP &amp; REST — the question of whether and how the asynchronous nature of the network is surfaced in the local APIs is up to each component to decide.</p>
+</div>
+<div class="paragraph">
+<p>A key aspect of asynchronous messaging and/or APIs is that it makes the network, with all its constraints, explicit and first-class in the design. It forces you to <em>design for failure</em> and <em>uncertainty</em> instead of pretending that the network is not there and trying to hide it behind a <a href="http://bit.ly/2ve6r7J">leaky local abstraction</a> [<span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span>, window="new tab"] (e.g. network-attached disks), just to see it fall apart in the face of partial failures, message loss, or reordering.</p>
+</div>
+<div class="paragraph">
+<p>It also allows for <a href="https://www.reactivemanifesto.org/glossary#Location-Transparency">location transparency</a>, <a href="https://www.reactivemanifesto.org/glossary#Location-Transparency" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> which gives you one single abstraction for all component interactions, regardless of whether the component is co-located on the same physical machine, in another rack, or even another data center. Asynchronous APIs allow cloud infrastructures such as discovery services and load balancers to route requests to wherever the container or VM is running while embracing the likelihood of ever-changing latency and failure characteristics. This provides one programming model with a single set of semantics regardless of how the system is deployed or what topology it currently has (which can change with its usage).</p>
+</div>
+<div class="paragraph">
+<p>Spatial decoupling enables replication, which ultimately increases the resilience of the system and availability. By running multiple instances of a component, these instances can share the load. Thanks to location transparency, the rest of the system does not need to know where these instances are located but the capacity of the system can be increased transparently, on-demand. If one instance crashes or is undeployed, the other replicas continue to operate and share the load. This capability to fail-over is essential to avoid service disruption.</p>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="decouple-time.html">VI. Decouple Time</a></span>
+  <span class="next"><a href="handle-dynamics.html">VIII. Handle Dynamics</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+	<div class="legal">
+		<p class="trademark">
+			&copy; 2020 All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" target="_blank">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.
+		</p>
+		<p class="link-list">
+			<a href="http://www.linuxfoundation.org/privacy" target="_blank">Privacy Policy</a> |
+			<a href="http://www.linuxfoundation.org/terms" target="_blank">Terms of Use</a> |
+			<a class="optanon-toggle-display">Cookie Settings</a>
+		</p>
+	</div>
+	<div class="brand">
+		<a href="https://reactive.foundation">
+			<img class="footer-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+		</a>
+	</div>
+</footer><script>
+  window.antora = window.antora || {}
+  window.antora.basePath = '..'
+  window.antora.pagePath = '/principles/decouple-space.html'
+</script>
+
+<script src="../_/js/site.js"></script>
+
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/vendor/search.js"></script>
+<script async src="../_/../search-index.js"></script>
+
+<script async src="../_/js/vendor/highlight.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" class="optanon-category-2" async src="https://www.googletagmanager.com/gtag/js?id=UA-177054281-1"></script>
+<script type="text/plain" class="optanon-category-2">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177054281-1');
+</script>
+  </body>
+</html>

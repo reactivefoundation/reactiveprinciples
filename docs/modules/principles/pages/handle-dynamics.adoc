@@ -1,0 +1,15 @@
+= VIII. Handle Dynamics
+include::ROOT:partial$include.adoc[]
+
+
+_Continuously adapt to varying demand and resources_
+
+
+Applications need to stay responsive under workloads that can vary drastically and continuously adapt to the situation—ensuring that supply always meets demand, while not over-allocating resources. This means being https://www.reactivemanifesto.org/glossary#Elasticity[elastic] https://www.reactivemanifesto.org/glossary#Elasticity[{tab}, window="new tab"] and reacting to changes in the input rate by increasing or decreasing the resources allocated to service these inputs—allowing the throughput to scale up or down automatically to meet varying demands.
+
+Where resources are fixed, the scope of processed inputs needs to be adjusted instead, signaling this degradation to the outside. This can be done by discarding less relevant parts of the input data, for example: discarding older or more far-reaching sensor data in IoT applications, or shrinking the horizon or reducing the quality of forecasts in autonomous vehicles. This trades a reduction in efficiency for the sustained ability to function at all and guides design:
+
+* Firstly, being able to make such trade-offs at runtime requires the component to be autonomous, it helps greatly if it is decoupled both in space and time and only exposes well-designed protocols to the outside. This allows for example changes to sharding and replication to be done transparently.
+* Secondly, you need to be able to make educated guesses. The system must track relevant live usage metrics and continuously feed the data to predictive or reactive scaling algorithms so that it can get real-time insights into how the application is being used and is coping with the current load. This allows it to make informed decisions on how to scale the system’s resources or functional parameters up or down, ideally in an automatic fashion (so-called https://en.wikipedia.org/wiki/Autoscaling[“auto-scaling”] https://en.wikipedia.org/wiki/Autoscaling[{tab}, window="new tab"]).
+
+Finally, distributed systems undergo different types of dynamics. On the Cloud, the topology is continuously evolving, stressing the need for xref:decouple-space.adoc[_spatial decoupling_]. Service availability is also subject to evolution: services can come and go at any time—a type of dynamism that emphasizes the need for xref:decouple-time.adoc[_temporal decoupling_].

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VI. Decouple Time :: Reactive Principles &amp; Patterns</title>
+    <link rel="prev" href="tailor-consistency.html">
+    <link rel="next" href="decouple-space.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../_/css/site.css">
+	<!-- OneTrust Cookies Consent Notice start for  -->
+	<script src="https://optanon.blob.core.windows.net/consent/668cc234-6daa-46b1-ab65-da192e2f6887-test.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for  -->
+
+	
+  </head>
+  <!--add class="scroll-nav..." to body-->
+  <body class="article">
+<header class="header">
+	<nav class="navbar">
+		
+		<div class="navbar-brand">
+		
+			<a class="navbar-item site-logo" href="https://reactive.foundation">
+				<img class="navbar-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+			</a>
+			<span class="separator">|</span>
+			<a class="navbar-item site-title" href="https://principles.reactive.foundation">
+				Reactive Principles &amp; Patterns
+			</a>
+
+			<div class="navbar-item search-bar">
+				<input id="search-input" type="text" placeholder="Search">
+			</div>
+
+
+			<button class="navbar-burger" data-target="topbar-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<div id="topbar-nav" class="navbar-menu">
+			<div class="navbar-end">
+				<!-- a class="navbar-item" href="#">Home</a -->
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="#">Resources</a>
+					<div class="navbar-dropdown">
+						<a class="navbar-item" href="#">Resource 1</a>
+						<a class="navbar-item" href="#">Resource 2</a>
+						<a class="navbar-item" href="#">Resource 3</a>
+					</div>
+				</div >
+				<!-- div class="navbar-item">
+				<span class="control">
+				<a class="button is-primary" href="#">Download</a>
+				</span>
+				</div -->
+			</div>
+		</div>
+
+	</nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">About this Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud-native/index.html">Design Principles for Cloud Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../edge-native/index.html">Design Principles for Edge Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The Reactive principles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stay-responsive.html">I. Stay responsive</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="accept-uncertainty.html">II. Accept uncertainty</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="embrace-failure.html">III. Embrace failure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="assert-autonomy.html">IV. Assert Autonomy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tailor-consistency.html">V. Tailor Consistency</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="decouple-time.html">VI. Decouple Time</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="decouple-space.html">VII. Decouple Space</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="handle-dynamics.html">VIII. Handle Dynamics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../patterns/index.html">The Reactive patterns</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/partition-state.html">1. Partition State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/communicate-facts.html">2. Communicate Facts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/isolate-mutations.html">3. Isolate Mutations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/coordinate-dataflow.html">4. Coordinate Dataflow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/localize-state.html">5. Localize State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../patterns/observe-communications.html">6. Observe Communications</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">master Beta</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master Beta</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">The Reactive principles</a></li>
+    <li><a href="decouple-time.html">VI. Decouple Time</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/git-local/1a-reactive/reactive-principles/docs/modules/principles/pages/decouple-time.adoc">Contribute</a></div -->
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">VI. Decouple Time</h1>
+<div class="paragraph">
+<p><em>Process asynchronously to avoid coordination and waiting</em></p>
+</div>
+<div class="paragraph">
+<p>It’s been said that “silence is golden”, and it is as true in software systems as in the real world.  <a href="https://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl’s Law</a> <a href="https://en.wikipedia.org/wiki/Amdahl%27s_law" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> and the <a href="http://www.perfdynamics.com/Manifesto/USLscalability.html">Universal Scalability Law</a> <a href="http://www.perfdynamics.com/Manifesto/USLscalability.html" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> show that the ceiling on scalability can be lifted by avoiding needless communication, coordination, and waiting.</p>
+</div>
+<div class="paragraph">
+<p>There are still times when we have to communicate and coordinate our actions. The problem with blocking on resources—for example <a href="https://en.wikipedia.org/wiki/Input/output">I/O</a> <a href="https://en.wikipedia.org/wiki/Input/output" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> but also when calling a different service—is that the caller, including the thread it is executing on, is held hostage waiting for the resource to become available. During this time the calling component (or a part thereof) is unavailable for other requests.</p>
+</div>
+<div class="paragraph">
+<p>This can be mitigated or avoided by employing <em>temporal decoupling</em>. Temporal decoupling helps break the time availability dependency between remote components. When multiple components synchronously exchange messages, it presumes the availability and reachability of all these components for the duration of the exchange. This is a fragile assumption in the context of distributed systems, where we can’t ensure the availability or reachability of all components in a system at all times. By introducing temporal decoupling in our communication protocols, one component does not need to assume and require the availability of the other components. It makes the components more independent and autonomous and, as a consequence, the overall system more reliable. Popular techniques to implement temporal decoupling include durable message queues, append-only journals, and publish-subscribe topics with a retention duration.</p>
+</div>
+<div class="paragraph">
+<p>With temporal decoupling, we give the caller the option to perform other work, <a href="https://www.reactivemanifesto.org/glossary#Asynchronous">asynchronously</a>, <a href="https://www.reactivemanifesto.org/glossary#Asynchronous" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> rather than be blocked waiting on the resource to become available. This can be achieved by allowing the caller to put its request on a queue, register a <a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)">callback</a> <a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> to be notified later, return immediately, and continue execution (e.g., <a href="https://www.reactivemanifesto.org/glossary#Non-Blocking">non-blocking I/O</a> <a href="https://www.reactivemanifesto.org/glossary#Non-Blocking" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a>). A great way to orchestrate callbacks is to use a <a href="https://en.wikipedia.org/wiki/Finite-state_machine">Finite State Machine</a> <a href="https://en.wikipedia.org/wiki/Finite-state_machine" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> (FSM), other techniques include <a href="https://en.wikipedia.org/wiki/Futures_and_promises">Futures/Promises</a>, <a href="https://en.wikipedia.org/wiki/Futures_and_promises" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> <a href="https://en.wikipedia.org/wiki/Dataflow_programming">Dataflow Variables</a>,  <a href="https://en.wikipedia.org/wiki/Dataflow_programming" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Async/Await</a>, <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> <a href="https://en.wikipedia.org/wiki/Coroutine">Coroutines</a>, <a href="https://en.wikipedia.org/wiki/Coroutine" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> and composition of <a href="https://blog.colinbreck.com/maximizing-throughput-for-akka-streams/">asynchronous functional combinators</a> <a href="https://blog.colinbreck.com/maximizing-throughput-for-akka-streams/" target="new tab"><span class="image"><img src="../_images/new-tab.svg" alt="new tab" width="14"></span></a> in streaming libraries.</p>
+</div>
+<div class="paragraph">
+<p>The aforementioned programming techniques serve the higher-level purpose of affording each component in a Reactive application more freedom in choosing to process incoming information in their own time, according to their own prioritization. As such, this decoupling also gives components more autonomy.</p>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="tailor-consistency.html">V. Tailor Consistency</a></span>
+  <span class="next"><a href="decouple-space.html">VII. Decouple Space</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+	<div class="legal">
+		<p class="trademark">
+			&copy; 2020 All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" target="_blank">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.
+		</p>
+		<p class="link-list">
+			<a href="http://www.linuxfoundation.org/privacy" target="_blank">Privacy Policy</a> |
+			<a href="http://www.linuxfoundation.org/terms" target="_blank">Terms of Use</a> |
+			<a class="optanon-toggle-display">Cookie Settings</a>
+		</p>
+	</div>
+	<div class="brand">
+		<a href="https://reactive.foundation">
+			<img class="footer-logo" src="../_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+		</a>
+	</div>
+</footer><script>
+  window.antora = window.antora || {}
+  window.antora.basePath = '..'
+  window.antora.pagePath = '/principles/decouple-time.html'
+</script>
+
+<script src="../_/js/site.js"></script>
+
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/vendor/search.js"></script>
+<script async src="../_/../search-index.js"></script>
+
+<script async src="../_/js/vendor/highlight.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" class="optanon-category-2" async src="https://www.googletagmanager.com/gtag/js?id=UA-177054281-1"></script>
+<script type="text/plain" class="optanon-category-2">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177054281-1');
+</script>
+  </body>
+</html>

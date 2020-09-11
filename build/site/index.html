@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>The Reactive Principles and Patterns :: Reactive Principles &amp; Patterns</title>
+    <link rel="next" href="cloud-native/index.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;1,400;1,500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./_/css/site.css">
+	<!-- OneTrust Cookies Consent Notice start for  -->
+	<script src="https://optanon.blob.core.windows.net/consent/668cc234-6daa-46b1-ab65-da192e2f6887-test.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for  -->
+
+	
+  </head>
+  <!--add class="scroll-nav..." to body-->
+  <body class="article">
+<header class="header">
+	<nav class="navbar">
+		
+		<div class="navbar-brand">
+		
+			<a class="navbar-item site-logo" href="https://reactive.foundation">
+				<img class="navbar-logo" src="./_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+			</a>
+			<span class="separator">|</span>
+			<a class="navbar-item site-title" href="https://principles.reactive.foundation">
+				Reactive Principles &amp; Patterns
+			</a>
+
+			<div class="navbar-item search-bar">
+				<input id="search-input" type="text" placeholder="Search">
+			</div>
+
+
+			<button class="navbar-burger" data-target="topbar-nav">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+
+		<div id="topbar-nav" class="navbar-menu">
+			<div class="navbar-end">
+				<!-- a class="navbar-item" href="#">Home</a -->
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link" href="#">Resources</a>
+					<div class="navbar-dropdown">
+						<a class="navbar-item" href="#">Resource 1</a>
+						<a class="navbar-item" href="#">Resource 2</a>
+						<a class="navbar-item" href="#">Resource 3</a>
+					</div>
+				</div >
+				<!-- div class="navbar-item">
+				<span class="control">
+				<a class="button is-primary" href="#">Download</a>
+				</span>
+				</div -->
+			</div>
+		</div>
+
+	</nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html"></a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">About this Document</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cloud-native/index.html">Design Principles for Cloud Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="edge-native/index.html">Design Principles for Edge Native Applications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="principles/index.html">The Reactive principles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/stay-responsive.html">I. Stay responsive</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/accept-uncertainty.html">II. Accept uncertainty</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/embrace-failure.html">III. Embrace failure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/assert-autonomy.html">IV. Assert Autonomy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/tailor-consistency.html">V. Tailor Consistency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/decouple-time.html">VI. Decouple Time</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/decouple-space.html">VII. Decouple Space</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="principles/handle-dynamics.html">VIII. Handle Dynamics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="patterns/index.html">The Reactive patterns</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="patterns/partition-state.html">1. Partition State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="patterns/communicate-facts.html">2. Communicate Facts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="patterns/isolate-mutations.html">3. Isolate Mutations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="patterns/coordinate-dataflow.html">4. Coordinate Dataflow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="patterns/localize-state.html">5. Localize State</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="patterns/observe-communications.html">6. Observe Communications</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title"></span>
+    <span class="version">master Beta</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title"></span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master Beta</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">About this Document</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/git-local/1a-reactive/reactive-principles/docs/modules/ROOT/pages/index.adoc">Contribute</a></div -->
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">The Reactive Principles and Patterns</h1>
+<div class="paragraph">
+<p><em>Design Principles for Distributed Applications</em></p>
+</div>
+<div class="sidebarblock float">
+<div class="content">
+<div class="paragraph">
+<p>Written by Jonas Bonér—with help (roughly in order of contribution level) from: Roland Kuhn, Ben Christensen, Peter Vlugter, Josh Long, Sergey Bykov, Ben Hindman, Vaughn Vernon, Clement Escoffier, James Roper, Michael Behrendt, Kresten Krab Thorup, Colin Breck, Allard Buijze, Derek Collison, Viktor Klang, Ben Hale, Steve Gury, Tyler Jewell, James Ward, Stephan Ewen, and Ryland Degnan.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This document provides guidance and techniques established among experienced Reactive practitioners for building individual services, applications, and whole systems. As a companion to the <a href="https://www.reactivemanifesto.org/">Reactive Manifesto</a>, <a href="https://www.reactivemanifesto.org/" target="new tab"><span class="image"><img src="_images/new-tab.svg" alt="new tab" width="14"></span></a> it incorporates the ideas, paradigms, methods, and patterns from both Reactive Programming and Reactive Systems into a set of practical principles that software architects and developers can apply in their transformative work.</p>
+</div>
+<div class="paragraph">
+<p>Our purpose is to help businesses realize the efficiencies inherent to using Reactive. Our collective experience shows that these principles enable the design and implementation of  highly concurrent and distributed software that is performant, scalable, and resilient, while at the same time conserving resources when deploying, operating, and maintaining it.  Further application of Reactive principles will allow us as a society to depend on software for making our diverse and distributed civilization more robust.</p>
+</div>
+<div class="exampleblock home-page-grid">
+<div class="content">
+<div class="openblock">
+<div class="content">
+<h2 id="_design_principles_for_cloud_native_applications" class="discrete">Design Principles for Cloud Native Applications</h2>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Learn</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>How the Reactive approach to Cloud Native provides benefits</p>
+</li>
+<li>
+<p>Why Cloud Native infrastructure alone isn&#8217;t enough to achieve elasticity, scalability, and resilience</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph read-link">
+<p><a href="cloud-native/index.html" class="page">Read More &#8594;</a></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<h2 id="_design_principles_for_edge_native_applications" class="discrete">Design Principles for Edge Native Applications</h2>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Learn</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>The constraints Edge Native imposes on design</p>
+</li>
+<li>
+<p>How to avoid impedance mismatch between Edge Native and Cloud Native applications</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph read-link">
+<p><a href="edge-native/index.html" class="page">Read More &#8594;</a></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<h2 id="_the_reactive_principles" class="discrete">The Reactive Principles</h2>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Learn</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>What makes a system Reactive</p>
+</li>
+<li>
+<p>How to:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Stay responsive</p>
+</li>
+<li>
+<p>Accept uncertainty</p>
+</li>
+<li>
+<p>Embrace failure</p>
+</li>
+<li>
+<p>Build reliability despite unreliable foundations</p>
+</li>
+<li>
+<p>Assert autonomy</p>
+</li>
+<li>
+<p>Tailor consistency</p>
+</li>
+<li>
+<p>Decouple time</p>
+</li>
+<li>
+<p>Decouple space</p>
+</li>
+<li>
+<p>Handle dynamics</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph read-link">
+<p><a href="principles/index.html" class="page">Read More &#8594;</a></p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<h2 id="_the_reactive_patterns" class="discrete">The Reactive Patterns</h2>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Learn how the following patterns contribute to Reactive design</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Partition State</p>
+</li>
+<li>
+<p>Communicate Facts</p>
+</li>
+<li>
+<p>Isolate Mutations</p>
+</li>
+<li>
+<p>Coordinate Dataflow</p>
+</li>
+<li>
+<p>Localize State</p>
+</li>
+<li>
+<p>Observe Communications</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph read-link">
+<p><a href="patterns/index.html" class="page">Read More &#8594;</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Version 1.0</em> <em>Published 2020-09-10</em></p>
+</div>
+<nav class="pagination">
+  <span class="next"><a href="cloud-native/index.html">Design Principles for Cloud Native Applications</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+	<div class="legal">
+		<p class="trademark">
+			&copy; 2020 All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" target="_blank">Trademark Usage</a> page. Linux is a registered trademark of Linus Torvalds.
+		</p>
+		<p class="link-list">
+			<a href="http://www.linuxfoundation.org/privacy" target="_blank">Privacy Policy</a> |
+			<a href="http://www.linuxfoundation.org/terms" target="_blank">Terms of Use</a> |
+			<a class="optanon-toggle-display">Cookie Settings</a>
+		</p>
+	</div>
+	<div class="brand">
+		<a href="https://reactive.foundation">
+			<img class="footer-logo" src="./_/img/logo/reactive-foundation-horizontal-color-reverse.svg">
+		</a>
+	</div>
+</footer><script>
+  window.antora = window.antora || {}
+  window.antora.basePath = '.'
+  window.antora.pagePath = '/index.html'
+</script>
+
+<script src="./_/js/site.js"></script>
+
+<script src="./_/js/vendor/lunr.js"></script>
+<script src="./_/js/vendor/search.js"></script>
+<script async src="./_/../search-index.js"></script>
+
+<script async src="./_/js/vendor/highlight.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" class="optanon-category-2" async src="https://www.googletagmanager.com/gtag/js?id=UA-177054281-1"></script>
+<script type="text/plain" class="optanon-category-2">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177054281-1');
+</script>
+  </body>
+</html>

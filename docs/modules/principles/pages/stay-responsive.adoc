@@ -1,0 +1,13 @@
+= I. Stay Responsive
+
+_Always respond in a timely manner_
+
+Responsiveness matters. A lot. It is the face of your business and its quality of service, the last link in the chain, a bridge to your users, and the cornerstone of usability and utility. 
+
+It’s easy to stay responsive during “blue sky” scenarios when everything is going as planned. It is equally important, but a lot harder, to stay responsive in the face of unexpected failures, communication outages, and unpredictable workloads. Ultimately, to your users, it does not matter that the system is correct if it cannot provide its functionality within their time constraints.
+
+Being responsive is not just about low latency and fast response time, but also about managing changes—in data, usage patterns, context, and environment. Such changes should be represented within the application and its data model, right up to its end-user interactions; reactions to change will be communicated to the users of a component, be they human or programs, so that responses to requests can be interpreted in the right context.
+
+Reactive, responsive applications effectively detect and deal with problems. Reactive applications focus on providing rapid and consistent response times. In the worst-case, they respond with an error message or provide a degraded but still useful level of service. This establishes mutually understood upper bounds on response latency and thereby creates the basis for delivering a consistent quality of service. Such consistent behavior in turn simplifies error handling, builds end-user confidence, and encourages further interaction.
+
+Responsiveness can be elusive since it is affected by so many aspects of the system. It is nowhere and everywhere, influenced by everything from contention, coordination, coupling, data flow, communication patterns, resource management, failure handling, and uncertainty. It is the foundational concept that ties into, and motivates, all of the other principles.

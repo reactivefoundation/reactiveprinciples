@@ -1,0 +1,24 @@
+* xref:ROOT:index.adoc[About this Document]
+* xref:cloud-native:index.adoc[Design Principles for Cloud Native Applications]
+* xref:edge-native:index.adoc[Design Principles for Edge Native Applications]
+
+* xref:principles:index.adoc[The Reactive principles]
+** xref:principles:stay-responsive.adoc[I. Stay responsive]
+** xref:principles:accept-uncertainty.adoc[II. Accept uncertainty]
+** xref:principles:embrace-failure.adoc[III. Embrace failure]
+** xref:principles:assert-autonomy.adoc[IV. Assert Autonomy]
+** xref:principles:tailor-consistency.adoc[V. Tailor Consistency]
+** xref:principles:decouple-time.adoc[VI. Decouple Time]
+** xref:principles:decouple-space.adoc[VII. Decouple Space]
+** xref:principles:handle-dynamics.adoc[VIII. Handle Dynamics]
+
+
+* xref:patterns:index.adoc[The Reactive patterns]
+** xref:patterns:partition-state.adoc[1. Partition State]
+** xref:patterns:communicate-facts.adoc[2. Communicate Facts]
+** xref:patterns:isolate-mutations.adoc[3. Isolate Mutations]
+** xref:patterns:coordinate-dataflow.adoc[4. Coordinate Dataflow]
+** xref:patterns:localize-state.adoc[5. Localize State]
+** xref:patterns:observe-communications.adoc[6. Observe Communications]
+
+
