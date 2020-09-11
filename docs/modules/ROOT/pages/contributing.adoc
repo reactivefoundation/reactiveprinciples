@@ -1,0 +1,13 @@
+= Contribute
+include::ROOT:partial$include.adoc[]
+
+_Help us make this document better_
+
+This document is meant to be a living document, to be continuously improved and expanded upon by the Reactive community. A great (and much needed) way to contribute is to think of new patterns that we can add to the growing catalog of Reactive patterns. Another way is to create more “introductions” pages—context-framing lead-ins like the Cloud Native and Edge Native perspectives—that can help to put Reactive in a new context and explain how the principles and patterns apply to that.
+
+The text is https://github.com/reactivefoundation/reactiveprinciples[hosted on GitHub] https://github.com/reactivefoundation/reactiveprinciples[{tab}, window="new tab"], in https://asciidoc.org[Asciidoc markup] https://asciidoc.org[{tab}, window="new tab"], and published using https://antora.org[Antora] https://antora.org[{tab}, window="new tab"]. 
+
+For minor issues such as typos or broken links you can open an issue on the GitHub https://github.com/reactivefoundation/reactiveprinciples/issues[Issue Tracker] https://github.com/reactivefoundation/reactiveprinciples/issues[{tab}, window="new tab"]. If you have ideas for improvements then clone the repository, do your work, and then create a https://github.com/reactivefoundation/reactiveprinciples/pulls[Pull Request] https://github.com/reactivefoundation/reactiveprinciples/pulls[{tab}, window="new tab"] and ask for review. For major changes and/or additions please open an issue on the GitHub https://github.com/reactivefoundation/reactiveprinciples/issues[Issue Tracker] https://github.com/reactivefoundation/reactiveprinciples/issues[{tab}, window="new tab"] to discuss it before starting your work (it can save everyone a lot of time).  
+
+Thanks a lot. 
+
