@@ -1,4 +1,4 @@
-= Contribute
+= How To Contribute
 include::ROOT:partial$include.adoc[]
 
 _Help us make this document better_

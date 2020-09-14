@@ -1,6 +1,9 @@
 = The Reactive Patterns
 
-The following patterns can help us apply the xref:principles:index.adoc[Reactive Principles]:
+The following patterns can help us codify and apply the xref:principles:index.adoc[Reactive Principles] in our applications and systems. Not all of these patterns apply to all problems, use-cases, and contexts, but should be seen as tools in your toolbox to be used and applied selectively when needed. 
+
+It is not meant to be fixed set of patterns but a starting point for a growing and living patterns catalog that are maintained by the community. If you have ideas for new patterns or want to help out improving the existing ones (elaborate on the pattern discussion, add examples, or even sample code) then please read xref:ROOT:contributing.adoc[How to Contribute to this Document]. We need your help.
+ 
 
 * xref:partition-state.adoc[Partition State]
 * xref:communicate-facts.adoc[Communicate Facts]
