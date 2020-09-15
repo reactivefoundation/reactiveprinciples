@@ -1,6 +1,6 @@
 site:
   url: https://principles.reactive.foundation
-  title: Reactive Principles & Patterns
+  title: The Reactive Principles
   
 content:
   branches: [HEAD]
