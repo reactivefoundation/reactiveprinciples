@@ -5,7 +5,7 @@ site:
 content:
   branches: [HEAD]
   sources:
-  - url:  git@github.com:reactivefoundation/principles.reactive.foundation.git
+  - url:  git@github.com:reactivefoundation/reactiveprinciples.git
     edit_url: ~
     start-path: docs
   
