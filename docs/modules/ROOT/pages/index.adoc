@@ -1,4 +1,4 @@
-= The Reactive Principles and Patterns
+= The Reactive Principles
 
 ////
 Copyright 2020 Jonas Bonér & Reactive Foundation
