@@ -66,7 +66,6 @@ Learn:::
 *** Stay responsive
 *** Accept uncertainty
 *** Embrace failure
-*** Build reliability despite unreliable foundations
 *** Assert autonomy
 *** Tailor consistency
 *** Decouple time
