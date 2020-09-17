@@ -31,4 +31,13 @@ An application does not need to use Reactive approaches to apply these principle
 
 Most distributed systems will typically end up tackling some or all of the challenges described in the xref:cloud-native:index.adoc[Cloud Native] and xref:edge-native:index.adoc[Edge Native] introductions, but that alone does not make them Reactive.  What criteria do we use to  distinguish between  a “Reactive application” and one that is not Reactive? The Reactive one addresses these problems directly in its abstractions, programming models, protocols, interaction schemes, error handling, and other such areas of design and architecture. Whereas many distributed systems, unfortunately, treat these issues as an afterthought—as operational problems or infrastructure problems that are dealt with via increasingly complex technology stacks, wrappers, workarounds, and unfortunate leaky abstractions. 
 
-The rest of this section walks through foundational principles of implementing distributed systems that make an application Reactive.
+The rest of this section walks through foundational principles of implementing distributed systems that make an application Reactive:
+
+* xref:stay-responsive.adoc[I. Stay Responsive]
+* xref:accept-uncertainty.adoc[II. Accept Uncertainty]
+* xref:embrace-failure.adoc[III. Embrace Failure]
+* xref:assert-autonomy.adoc[IV. Assert Autonomy]
+* xref:tailor-consistency.adoc[V. Tailor Consistency]
+* xref:decouple-time.adoc[VI. Decouple Time]
+* xref:decouple-space.adoc[VII. Decouple Space]
+* xref:handle-dynamics.adoc[VII. Handle Dynamics]
