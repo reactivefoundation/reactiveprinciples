@@ -40,4 +40,4 @@ The rest of this section walks through foundational principles of implementing d
 * xref:tailor-consistency.adoc[V. Tailor Consistency]
 * xref:decouple-time.adoc[VI. Decouple Time]
 * xref:decouple-space.adoc[VII. Decouple Space]
-* xref:handle-dynamics.adoc[VII. Handle Dynamics]
+* xref:handle-dynamics.adoc[VIII. Handle Dynamics]
